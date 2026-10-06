@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Usuario: {{ usuarios.nombre }}</h1>
+    <h2>peliculas:</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>director</th>
+                <th>sinopsis</th>
+                <th>acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pelicula in peliculas %}
+            <tr>
+                <td>
+                    {{pelicula.nombre}}
+                </td>
+                <td>
+                    {{pelicula.director}}
+                </td>
+                <td>
+                    {{pelicula.sinopsi}}
+                </td>
+                <td>
+                    <a href="">ver</a>
+                    <a href="">editar</a>
+                    <a href="">eliminar</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

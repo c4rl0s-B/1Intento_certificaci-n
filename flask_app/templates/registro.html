@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>crea tu usuario</h2>
+    <div class="tabla_regiistro">
+        <form action="/registro/crear" method="post">
+            <!--nombre-->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+            <!--apellido-->
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br>
+            <!--email-->
+            <label for="E-email">E-email</label>
+            <input type="email" id="email" name="email" requiered>
+            <br>
+            <!--contraseña-->
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password">
+            <br>
+            <!--confirmar contraseña-->
+            <label for="confirmar">Confirmar contraseña</label>
+            <input type="password" id="confirmar" name="confirmar" required >
+            <br>
+            <button type="submit">registrarte</button>
+        </form>
+    </div>
+    <h2>Iniciar Sesion</h2>
+    <div class="login">
+        <form action="{{url_for('login')}}" method="post">
+            <label for="email">E-email</label>
+            <input type="email" id="email" name="email" placeholder="Tu@gmail.com" required>
+            <br>
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" placeholder="*************" required>
+            <br>
+            <button type="submit">Iniciar Sesion</button>
+        </form>
+    </div>
+</body>
+</html>
